@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import datetime as dt
+import matplotlib.pyplot as plt
 from pathlib import Path
 
 st.set_page_config(page_title="Gym Weekly Muscle Work Analyzer", page_icon="💪", layout="centered")
@@ -111,9 +112,13 @@ else:
         st.dataframe(agg)  
 
         # Plot bar chart  
-  
-        
-       
+        fig, ax = plt.subplots()  
+        ax.bar(agg["muscle_group"].astype(str), agg["volume"])  
+        ax.set_xlabel("Muscle Group")  
+        ax.set_ylabel("Weekly Volume (sets × reps × weight)")  
+        ax.set_title("Weekly Muscle Work Distribution")  
+        st.pyplot(fig)  
+
         # Suggestions  
         max_vol = agg["volume"].max()  
         threshold = 0.2 * max_vol if max_vol > 0 else 0  
