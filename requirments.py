@@ -113,11 +113,7 @@ else:
         # Plot bar chart  
   
         
-        ax.set_xlabel("Muscle Group")  
-        ax.set_ylabel("Weekly Volume (sets × reps × weight)")  
-        ax.set_title("Weekly Muscle Work Distribution")  
-        st.pyplot(fig)  
-
+       
         # Suggestions  
         max_vol = agg["volume"].max()  
         threshold = 0.2 * max_vol if max_vol > 0 else 0  
