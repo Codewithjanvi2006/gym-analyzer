@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import datetime as dt
-import matplotlib.pyplot as plt
 from pathlib import Path
 
 st.set_page_config(page_title="Gym Weekly Muscle Work Analyzer", page_icon="💪", layout="centered")
