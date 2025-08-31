@@ -111,7 +111,7 @@ else:
         st.dataframe(agg)  
 
         # Plot bar chart  
-        fig, ax = plt.subplots()  
+  
         ax.bar(agg["muscle_group"].astype(str), agg["volume"])  
         ax.set_xlabel("Muscle Group")  
         ax.set_ylabel("Weekly Volume (sets × reps × weight)")  
