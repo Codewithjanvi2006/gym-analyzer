@@ -112,7 +112,7 @@ else:
 
         # Plot bar chart  
   
-        ax.bar(agg["muscle_group"].astype(str), agg["volume"])  
+        
         ax.set_xlabel("Muscle Group")  
         ax.set_ylabel("Weekly Volume (sets × reps × weight)")  
         ax.set_title("Weekly Muscle Work Distribution")  
